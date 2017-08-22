@@ -1,0 +1,43 @@
+{
+  "models" : [ {
+    "type" : "record",
+    "name" : "Abc",
+    "namespace" : "nam.e.spa.ce",
+    "doc" : "Be nice to write something!",
+    "fields" : [ {
+      "name" : "longUrl",
+      "type" : "string",
+      "doc" : "Be nice to write something!"
+    }, {
+      "name" : "shortUrl",
+      "type" : "string",
+      "doc" : "Be nice to write something!"
+    } ]
+  } ],
+  "schema" : {
+    "name" : "abc",
+    "namespace" : "nam.e.spa.ce",
+    "path" : "/abc",
+    "schema" : "nam.e.spa.ce.Abc",
+    "doc" : "generated from: com.newsoftvalley.myserver.rest.resources.AbcResource",
+    "collection" : {
+      "identifier" : {
+        "name" : "abcId",
+        "type" : "string"
+      },
+      "supports" : [ "create", "delete", "get", "update" ],
+      "methods" : [ {
+        "method" : "create"
+      }, {
+        "method" : "get"
+      }, {
+        "method" : "update"
+      }, {
+        "method" : "delete"
+      } ],
+      "entity" : {
+        "path" : "/abc/{abcId}"
+      }
+    }
+  }
+}

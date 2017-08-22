@@ -1,0 +1,27 @@
+{
+  "name" : "xyz",
+  "namespace" : "nam.e.spa.ce",
+  "path" : "/xyz",
+  "schema" : "nam.e.spa.ce.Xyz",
+  "doc" : "generated from: com.newsoftvalley.myserver.rest.resources.XyzResource",
+  "collection" : {
+    "identifier" : {
+      "name" : "xyzId",
+      "type" : "nam.e.spa.ce.XyzKey",
+      "params" : "com.linkedin.restli.common.EmptyRecord"
+    },
+    "supports" : [ "create", "delete", "get", "update" ],
+    "methods" : [ {
+      "method" : "create"
+    }, {
+      "method" : "get"
+    }, {
+      "method" : "update"
+    }, {
+      "method" : "delete"
+    } ],
+    "entity" : {
+      "path" : "/xyz/{xyzId}"
+    }
+  }
+}

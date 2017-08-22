@@ -1,0 +1,16 @@
+{
+  "type": "record",
+  "name": "XyKey",
+  "namespace": "nam.e.spa.ce",
+  "doc": "Be nice to write something!",
+  "fields": [
+    {
+      "name": "numA",
+      "type": "int"
+    },
+    {
+      "name": "numB",
+      "type": "int"
+    }
+  ]
+}

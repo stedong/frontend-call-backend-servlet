@@ -1,0 +1,25 @@
+apply plugin: 'pegasus' // defines dataModel(), dataTemplateCompile(), restClientCompile()
+
+dependencies {
+    // rest-api:generateDataTemplate
+    dataTemplateCompile spec.linkedin.pegasus.data
+    dataModel spec.linkedin.pegasus.restliCommon
+    //加入restClientCompile 'com.linkedin.pegasus:restli-client:11.0.17'
+    restClientCompile spec.linkedin.pegasus.restliClient
+}
+
+artifacts {
+    archives mainDataTemplateJar
+    archives mainRestClientJar
+}
+
+configure(install.repositories.mavenInstaller) {
+    addFilter('data-template') { artifact, file ->
+        artifact.name == 'rest-api-data-template'
+    }.artifactId = 'myserver-data-template'
+
+    // only turn this part on after *.restspec.json files are created
+    addFilter('rest-client') {artifact, file ->
+        artifact.name.contains 'rest-client'
+    }.artifactId = 'myserver-rest-client'
+}

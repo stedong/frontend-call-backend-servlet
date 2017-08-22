@@ -1,0 +1,6 @@
+apply plugin: 'java'
+
+dependencies {
+  compile spec.javax.servlet.servletApi
+  compile project(':myserver:rest-impl')
+}

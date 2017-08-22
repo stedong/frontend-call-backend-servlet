@@ -1,0 +1,18 @@
+{
+  "type": "record",
+  "name": "Abc",
+  "namespace": "nam.e.spa.ce",
+  "doc": "Be nice to write something!",
+  "fields": [
+    {
+      "name": "longUrl",
+      "type": "string",
+      "doc": "Be nice to write something!"
+    },
+    {
+      "name": "shortUrl",
+      "type": "string",
+      "doc": "Be nice to write something!"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "models" : [ {
+    "type" : "record",
+    "name" : "Xyz",
+    "namespace" : "nam.e.spa.ce",
+    "doc" : "Be nice to write something!",
+    "fields" : [ {
+      "name" : "numA",
+      "type" : "int"
+    }, {
+      "name" : "numB",
+      "type" : "int"
+    }, {
+      "name" : "sum",
+      "type" : "int"
+    } ]
+  }, {
+    "type" : "record",
+    "name" : "XyzKey",
+    "namespace" : "nam.e.spa.ce",
+    "doc" : "Be nice to write something!",
+    "fields" : [ {
+      "name" : "numA",
+      "type" : "int"
+    }, {
+      "name" : "numB",
+      "type" : "int"
+    } ]
+  }, {
+    "type" : "record",
+    "name" : "EmptyRecord",
+    "namespace" : "com.linkedin.restli.common",
+    "doc" : "An literally empty record.  Intended as a marker to indicate the absence of content where a record type is required.  If used the underlying DataMap *must* be empty, EmptyRecordValidator is provided to help enforce this.  For example,  CreateRequest extends Request<EmptyRecord> to indicate it has no response body.   Also, a ComplexKeyResource implementation that has no ParamKey should have a signature like XyzResource implements ComplexKeyResource<XyzKey, EmptyRecord, Xyz>.",
+    "fields" : [ ],
+    "validate" : {
+      "com.linkedin.restli.common.EmptyRecordValidator" : { }
+    }
+  } ],
+  "schema" : {
+    "name" : "xyz",
+    "namespace" : "nam.e.spa.ce",
+    "path" : "/xyz",
+    "schema" : "nam.e.spa.ce.Xyz",
+    "doc" : "generated from: com.newsoftvalley.myserver.rest.resources.XyzResource",
+    "collection" : {
+      "identifier" : {
+        "name" : "xyzId",
+        "type" : "nam.e.spa.ce.XyzKey",
+        "params" : "com.linkedin.restli.common.EmptyRecord"
+      },
+      "supports" : [ "create", "delete", "get", "update" ],
+      "methods" : [ {
+        "method" : "create"
+      }, {
+        "method" : "get"
+      }, {
+        "method" : "update"
+      }, {
+        "method" : "delete"
+      } ],
+      "entity" : {
+        "path" : "/xyz/{xyzId}"
+      }
+    }
+  }
+}

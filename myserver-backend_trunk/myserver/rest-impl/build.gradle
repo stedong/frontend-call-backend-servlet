@@ -1,0 +1,9 @@
+apply plugin: 'pegasus'
+// apply plugin: 'java' will NOT create restspec.json
+// needed for clint binding generation
+
+ext.apiProject = project(':myserver:rest-api')
+dependencies {
+    compile spec.linkedin.pegasus.restliServer
+    compile project(':myserver:rest-api')
+}
