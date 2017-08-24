@@ -7,7 +7,7 @@ import com.newsoftvalley.myserver.rest.db.fake.AbcDaoImpl;
 import com.newsoftvalley.myserver.rest.services.AbcService;
 import com.newsoftvalley.myserver.rest.services.AbcServiceFactory;
 import nam.e.spa.ce.Abc;
-
+//在backend 定义，curl command 时候用到的／abc就是这
 @RestLiCollection(name = "abc", namespace = "nam.e.spa.ce")
 public class AbcResource extends CollectionResourceTemplate<String, Abc> {
 
